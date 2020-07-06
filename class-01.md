@@ -1,4 +1,5 @@
-# HTML
+# HTML & CSS
+
 ## Chapter 1 - *Structure*
 
 * HTML is a text document
@@ -32,3 +33,20 @@
 * display different pieces of info with new color, size, or style
 * display similar pieces of info with grouping (proximity, closure, continuance, white space, color, borders), consistency, and headings
 * design navigation - concise, clear, selective, context, interactive, consistent
+
+# Javascript
+
+## Chapter 1 - *The ABC of Programming*
+
+* script - a series of instructions for the computer to execute
+1) define goal
+1) design script - write each step using words
+1) code each step - convert words to code
+* break down problem into small tasks
+* computers use data to define the world
+* objects represent physical things - contain properties (characteristics)
+* on event, run code
+* methods describe how code will interact (get and set)
+* DOM represents HTML code on page
+* .js extension holds JS file
+* `<script>` links CSS and JS file to HTML
