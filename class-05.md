@@ -63,7 +63,7 @@
     * text-indent
     * text-shadow
 * Psuedo-class Properties:
-    * :firest-letter
+    * :first-letter
     * :first-line
     * :link
     * :visited
