@@ -54,7 +54,7 @@
 * can use Chrome & Firefox to examine DOM
 
 
-## Article - *Understand Domaine*
+## Article - *Understand Domain*
 
 * Understand the problem domain
     * take a part of the problem and narrow focus
