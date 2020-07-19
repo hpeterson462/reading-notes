@@ -1,47 +1,86 @@
-## Article - *A Brief History of Local Storage*
+# HTML & CSS
 
-* Cookies originally held data - downside: only hold 4k of data, unencrypted, slow down application
-* `userData` stores up to 64kb of data
-* Flash cookies stored up to 100kb of data (2002)
-* Google created Gears - open source browser plugin (2006)
-* `dojox.storage` unified Adobe, Flash, Gears, Adobe AIR, & early HTML5 (2009)
-* All solutions were specific to single browser or thrid-party plugin
+## Chapter 15 - *Layout*
 
-* HTML5 Storage - local storage or DOM storage - `localStorage`
-    * store key-value pairs locally on client web browser
-    * never transmitted to remote web server
-    * implemented natively by web browser
+* `<div>` containing elements
+* Block Level Elements:
+    * `<h1>` `<p>` `<ul>` `<li>`
+* Inline Elements:
+    * `<img>` `<b>` `<i>`
+* Positioning Schemes:
+    * Normal - block level element appears static on a new line
+    * Relative - shifts element to top, right, bottom, or left from normal
+    * Absolute - positions element in relation to containing element - moves as user scroll up and down page
+    * Fixed - fixes element in browser window - doesn't move as user scrolls up and down
+    * Floating - shifts element right or left in block level
+* Z-Index - overlapping properties (1 top, 10 bottom)
+* Fixed Layout:
+    * Pros - 
+        * controls pixel values, position, and size of images
+        * control text line length
+    * Cons - 
+        * gaps around edge of page
+        * page can look smaller if user screen is bigger than designer screen
+        * doesn't fit all screen sizes
+        * page will often take up more vertical space
+* Liquid Layout:
+    * Pros - 
+        * pages expand and contract to fit screen size
+    * Cons - 
+        * unexpected design control
+        * text can stretch for long lines or narrow
+        * image can overflow container
+* keep pages within 960-1000 pixels wide
+* can include multiple CSS files in one page
 
-    * `if (Modernizr.localstorage) {
-  // window.localStorage is available!
-} else {
-  // no native support for HTML5 storage :(
-  // maybe try dojox.storage or a third-party solution
-}`
 
-    * Data stored as string 
-    * `getItem()` `setItem()`
-    * `var foo = localStorage.getItem("bar");
-// ...
-localStorage.setItem("bar", foo);` - can be written as - `var foo = localStorage["bar"];
-// ...
-localStorage["bar"] = foo;`
 
-    * to remove storage - `removeItem(in DOMString key);
-  void clear();
-};`
+# Javascript
 
-    * get total number of values in storage - `readonly attribute unsigned long length;
-  getter DOMString key(in unsigned long index);`
+## Chapter 10 - *Error Handling & Debugging*
 
-    * to track changes - set event `if (window.addEventListener) {
-  window.addEventListener("storage", handle_storage, false);
-} else {
-  window.attachEvent("onstorage", handle_storage);
-};`
-        * to callback (e = storage event object) - `function handle_storage(e) {
-  if (!e) { e = window.event; }
-}`
-
-    * storage limited to 5MB
-     
+* Order of Execution - how scripts are processed
+* Execution Contexts:
+    * global context, function context, eval context 
+    * variable scope - global, local
+* JS interpreter processes one line of code at a time
+    * When statement needs data from another function, it stacks (piles) the new function on top of the current task
+* Execution Context and Hoisting
+    * Execution Context has 2 Phases:
+        1) Prepare
+            1) new scope created
+            1) variables, functions, arguments created
+            1) value of `this` keyword is determined
+        1) Execute
+            1) assign values to variables
+            1) reference functions and run code
+            1) execute statements
+* JS has Lexical Scope:
+    * Functions are linked to the object they were defined in
+    * Children can access info from Parents, but Parent cannot access from Children
+* Error Objects:
+    * Properties:
+        * name - type of execution
+        * message - description
+        * fileNumber - name of JS file
+        * lineNumber
+    * Object:
+        * Error - generic 
+        * SyntaxError - syntax not followed
+        * ReferenceError - variable not declared or within scopes
+        * TypeError - unexpected data type
+        * URIError - encodeURI(), decodeURI() used incorrectly
+        * EvalError - eval() function used incorrectly
+* Deduction - where is the problem? what is the problem?
+* Dev Tools
+* Breakpoints
+* Try, Catch, Finally
+    * Try - execute this code
+    * Catch - if there is an exception, run this code
+    * Finally - always gets executed
+* Throwing Error - `throw new Error(message);`
+* some problems are browser specific
+* remove parts of code to see what's working
+* explain code - comment code, rubber ducking
+* data type issues
+* spelling errors
