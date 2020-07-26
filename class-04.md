@@ -39,7 +39,7 @@
  
  # Javascript
 
-## Chapter 3 - *Functions, Methods, & Objects*
+## Chapter 3 - *Functions, Methods, & Objects* 
 
 * Functions: 
     * tools to help perform a task
